@@ -98,8 +98,8 @@ modification follow.
 
 ## 
 <p align="center">
-  Hecho en <b>C# (WinForms) y DevExpress</b>.
+  Hecho en <b>C# (WinForms), DevExpress (ORM), y Firebase (BBDD)</b>.
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c#.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png" height="130px"/>
+  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c#.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/firebase.png" height="130px"/>
 </p>
