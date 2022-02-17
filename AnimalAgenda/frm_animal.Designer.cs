@@ -176,6 +176,7 @@ namespace AnimalAgenda
             "Pequeño",
             "Mediano",
             "Grande"});
+            this.cmbSize.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSize.Size = new System.Drawing.Size(140, 20);
             this.cmbSize.TabIndex = 8;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -192,6 +193,7 @@ namespace AnimalAgenda
             this.cmbSex.Properties.Items.AddRange(new object[] {
             "Hembra",
             "Macho"});
+            this.cmbSex.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSex.Size = new System.Drawing.Size(140, 20);
             this.cmbSex.TabIndex = 5;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -653,6 +655,7 @@ namespace AnimalAgenda
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnAnimal);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IconOptions.Image = global::AnimalAgenda.Properties.Resources.favicon;
             this.LookAndFeel.SkinName = "DevExpress Style";
             this.LookAndFeel.UseDefaultLookAndFeel = false;

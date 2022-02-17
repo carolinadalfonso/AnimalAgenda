@@ -59,7 +59,7 @@ namespace AnimalAgenda
             this.txtUser.Size = new System.Drawing.Size(260, 35);
             this.txtUser.TabIndex = 1;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Usuario requerido.";
+            conditionValidationRule1.ErrorText = "Usuario requerido";
             conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
             this.validationProvider.SetValidationRule(this.txtUser, conditionValidationRule1);
             // 

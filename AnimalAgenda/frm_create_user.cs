@@ -1,4 +1,5 @@
 ﻿using AnimalAgenda.Classes;
+using AnimalAgenda.Helpers;
 using System;
 
 namespace AnimalAgenda
@@ -28,7 +29,7 @@ namespace AnimalAgenda
                 this.Enabled = false;
                 User newUser = new User();
                 newUser.Name = txtName.Text;
-                newUser.Password = txtPassword.Text;
+                newUser.Password = txtPassword.Text.ToMD5();
                 newUser.IdUser = txtUser.Text;
                 await fireStore.SaveUser(newUser);
                 this.Enabled = true;

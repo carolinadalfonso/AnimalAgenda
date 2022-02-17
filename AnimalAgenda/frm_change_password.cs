@@ -1,4 +1,5 @@
 ﻿using AnimalAgenda.Classes;
+using AnimalAgenda.Helpers;
 using System;
 
 namespace AnimalAgenda
@@ -28,7 +29,7 @@ namespace AnimalAgenda
             if (validationProvider.Validate())
             {
                 this.Enabled = false;
-                userLogged.Password = txtPassword.Text;
+                userLogged.Password = txtPassword.Text.ToMD5();
                 await fireStore.SaveUser(userLogged);
                 this.Enabled = true;
                 this.Close();

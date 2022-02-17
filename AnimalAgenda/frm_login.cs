@@ -1,4 +1,5 @@
 ﻿using AnimalAgenda.Classes;
+using AnimalAgenda.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -31,7 +32,7 @@ namespace AnimalAgenda
             {
                 this.Enabled = false;
                 List<User> users = await fireStore.GetUsers();
-                userLogged = users.Find(u => u.IdUser == txtUser.Text && u.Password == txtPassword.Text);
+                userLogged = users.Find(u => u.IdUser == txtUser.Text && u.Password == txtPassword.Text.ToMD5());
                 if (userLogged != null)
                 {
                     lblError.Visible = false;
