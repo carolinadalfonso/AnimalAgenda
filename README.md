@@ -8,7 +8,7 @@
 </p>  
 
 ## Descripción  
-**Animal Agenda** es una página orientada a ayudar a los animales rescatados y mantenidos por padrinos y madrinas que se esmeran todos los días en casos nuevos.
+**Animal Agenda** es una aplicación que lleva el registro de distintos animales que ingresan a un refugio, junto con su historia, salud, y datos generales.
 
 ## Realizado por: 
 - Carolina Andrea D'Alfonso</br>
