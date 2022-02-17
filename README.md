@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/logo.png" width="300px">
+  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/logo_app.png" width="300px">
 </p>
 
 *** 
@@ -8,7 +8,7 @@
 </p>  
 
 ## Descripción  
-**Animal Agenda** es una aplicación que lleva el registro de distintos animales que ingresan a un refugio, junto con su historia, salud, y datos generales.
+**Animal Agenda** es una aplicación de **Animales En Apuros** que lleva el registro de distintos animales que ingresan a un refugio, junto con su historia, salud, y datos generales.
 
 ## Realizado por: 
 - Carolina Andrea D'Alfonso</br>
