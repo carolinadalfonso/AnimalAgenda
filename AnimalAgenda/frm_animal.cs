@@ -131,7 +131,7 @@ namespace AnimalAgenda
                 }
 
                 await ((frm_main)Owner).SearchAnimals();
-                this.Close();        
+                this.Close();
             }
             else
             {
@@ -153,7 +153,7 @@ namespace AnimalAgenda
             if (fdPhoto.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 this.Enabled = false;
-                using (var fs = File.Open(fdPhoto.FileNames[0], FileMode.Open)) 
+                using (var fs = File.Open(fdPhoto.FileNames[0], FileMode.Open))
                 {
                     if (!string.IsNullOrEmpty(photo))
                     {
