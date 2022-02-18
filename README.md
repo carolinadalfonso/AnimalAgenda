@@ -18,7 +18,7 @@
 
 ## Capturas:
 
-<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/login.PNG" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/main.PNG" width="500px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/animal.PNG" width="500px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/new_user.PNG" width="500px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/about.PNG" width="500px" /> 
+<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/login.PNG" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/main.PNG" width="600px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/animal.PNG" width="600px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/new_user.PNG" width="400px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/about.PNG" width="400px" /> 
 
 ## Licencia:
 ```
@@ -99,5 +99,5 @@ modification follow.
   Hecho en <b>C# (WinForms), DevExpress (ORM), y Firebase (BBDD)</b>.
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c%23.png" height="130px" style="margin: 0px 10px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/firebase.png" height="130px"/>
+  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c%23.png" height="130px"/> &nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/firebase.png" height="130px"/>
 </p>
