@@ -308,6 +308,12 @@
     <Compile Include="Classes\DateTimeSpan.cs" />
     <Compile Include="Classes\MyFireStore.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="frm_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_about.Designer.cs">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_animal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_about.resx">
+      <DependentUpon>frm_about.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_animal.resx">
       <DependentUpon>frm_animal.cs</DependentUpon>
     </EmbeddedResource>

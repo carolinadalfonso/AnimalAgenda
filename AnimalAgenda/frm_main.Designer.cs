@@ -51,11 +51,13 @@ namespace AnimalAgenda
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.cmdSearch = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.cmdExit = new DevExpress.XtraBars.BarButtonItem();
+            this.cmdAbout = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.cmdAdd = new DevExpress.XtraBars.BarButtonItem();
             this.cmdEdit = new DevExpress.XtraBars.BarButtonItem();
             this.cmdDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.cmdExit = new DevExpress.XtraBars.BarButtonItem();
             this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -171,7 +173,8 @@ namespace AnimalAgenda
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup6});
             this.ribbonPage2.Name = "ribbonPage2";
             reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
             reduceOperation1.GroupName = null;
@@ -232,19 +235,18 @@ namespace AnimalAgenda
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
-            this.ribbonPageGroup5.ItemLinks.Add(this.cmdExit);
+            this.ribbonPageGroup5.ItemLinks.Add(this.cmdAbout);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
-            // cmdExit
+            // cmdAbout
             // 
-            this.cmdExit.Caption = "Salir";
-            this.cmdExit.Id = 10;
-            this.cmdExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdExit.ImageOptions.Image")));
-            this.cmdExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("cmdExit.ImageOptions.LargeImage")));
-            this.cmdExit.LargeWidth = 50;
-            this.cmdExit.Name = "cmdExit";
-            this.cmdExit.SmallWithTextWidth = 90;
-            this.cmdExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmdExit_ItemClick);
+            this.cmdAbout.Caption = "Acerca de";
+            this.cmdAbout.Id = 21;
+            this.cmdAbout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdAbout.ImageOptions.Image")));
+            this.cmdAbout.LargeWidth = 60;
+            this.cmdAbout.Name = "cmdAbout";
+            this.cmdAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.cmdAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmdAbout_ItemClick);
             // 
             // ribbonPageGroup2
             // 
@@ -282,6 +284,25 @@ namespace AnimalAgenda
             this.cmdDelete.Name = "cmdDelete";
             this.cmdDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmdDelete_ItemClick);
             // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
+            this.ribbonPageGroup6.AllowTextClipping = false;
+            this.ribbonPageGroup6.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonPageGroup6.ItemLinks.Add(this.cmdExit);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
+            // cmdExit
+            // 
+            this.cmdExit.Caption = "Salir";
+            this.cmdExit.Id = 10;
+            this.cmdExit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdExit.ImageOptions.Image")));
+            this.cmdExit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("cmdExit.ImageOptions.LargeImage")));
+            this.cmdExit.LargeWidth = 50;
+            this.cmdExit.Name = "cmdExit";
+            this.cmdExit.SmallWithTextWidth = 90;
+            this.cmdExit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmdExit_ItemClick);
+            // 
             // rcMain
             // 
             this.rcMain.AllowMinimizeRibbon = false;
@@ -308,9 +329,10 @@ namespace AnimalAgenda
             this.barButtonItem3,
             this.menuUsers,
             this.cmdCreateUsers,
-            this.cmdChangePassword});
+            this.cmdChangePassword,
+            this.cmdAbout});
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 21;
+            this.rcMain.MaxItemId = 22;
             this.rcMain.Name = "rcMain";
             this.rcMain.OptionsPageCategories.ShowCaptions = false;
             this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -410,6 +432,8 @@ namespace AnimalAgenda
         private DevExpress.XtraBars.BarButtonItem cmdMenu;
         private DevExpress.XtraBars.BarButtonItem cmdCreateUser;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem cmdAbout;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }
 

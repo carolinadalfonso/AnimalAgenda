@@ -79,6 +79,12 @@ namespace AnimalAgenda
             }
         }
 
+        private void cmdAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_about frmAbout = new frm_about();
+            frmAbout.ShowDialog(this);
+        }
+
         #endregion
 
         #region Methods
@@ -101,5 +107,6 @@ namespace AnimalAgenda
         }
 
         #endregion
+
     }
 }
