@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/logo_app.png" width="300px">
+  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/logo_app.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px">
 </p>
 
 *** 
@@ -19,7 +19,7 @@
 ## Capturas:
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/" width="300px" /> 
+<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/login.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/main.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/animal.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/new_user.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/Capturas/about.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" width="300px" /> 
 </p>
 
 ## Licencia:
@@ -101,5 +101,5 @@ modification follow.
   Hecho en <b>C# (WinForms), DevExpress (ORM), y Firebase (BBDD)</b>.
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c#.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/firebase.png" height="130px"/>
+  <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/c#.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/devexpress.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" height="130px"/> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/firebase.png?token=GHSAT0AAAAAABRV7UG3TCKD4ZJ75H5MSS3KYQP6AMQ" height="130px"/>
 </p>
