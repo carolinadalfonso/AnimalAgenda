@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AnimalAgenda
@@ -16,6 +15,11 @@ namespace AnimalAgenda
         [STAThread]
         static void Main()
         {
+            string processName = Process.GetCurrentProcess().ProcessName;
+
+            if (Process.GetProcesses().Count(p => p.ProcessName == processName) > 1)
+                return;
+
             CultureInfo culture = CultureInfo.CreateSpecificCulture("es-ES");
             Thread.CurrentThread.CurrentUICulture = culture;
             Thread.CurrentThread.CurrentCulture = culture;
@@ -33,7 +37,7 @@ namespace AnimalAgenda
             else
             {
                 Application.Exit();
-            }
+            }            
         }
     }
 }
