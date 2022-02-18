@@ -18,7 +18,7 @@
 
 ## Capturas:
 
-<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/login.PNG" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/main.PNG" width="700px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/animal.PNG" width="700px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/new_user.PNG" width="350px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/about.PNG" width="400px" /> 
+<img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/login.PNG" width="300px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/main.PNG" width="700px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/animal.PNG" width="700px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/new_user.PNG" height="200px" /> <img src="https://raw.githubusercontent.com/carolinadalfonso/AnimalAgenda/main/AnimalAgenda/Images/capturas/about.PNG" height="200px" /> 
 
 ## Licencia:
 ```
