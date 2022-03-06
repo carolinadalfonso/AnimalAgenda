@@ -51,6 +51,10 @@ namespace AnimalAgenda
                 txtBreed.Text = selectedAnimal.Breed;
                 cmbSize.Text = selectedAnimal.Size;
                 txtCharacter.Text = selectedAnimal.Character;
+                if(selectedAnimal.Status != string.Empty)
+                {
+                    cmbStatus.Text = selectedAnimal.Status;
+                }
                 txtHairColor.Text = selectedAnimal.HairColor;
                 photo = selectedAnimal.Photo;
                 photoFileName = selectedAnimal.PhotoFileName;
@@ -104,6 +108,7 @@ namespace AnimalAgenda
                 selectedAnimal.Breed = txtBreed.Text;
                 selectedAnimal.Size = cmbSize.Text;
                 selectedAnimal.Character = txtCharacter.Text;
+                selectedAnimal.Status = cmbStatus.Text;
                 selectedAnimal.HairColor = txtHairColor.Text;
                 selectedAnimal.Photo = photo;
                 selectedAnimal.PhotoFileName = photoFileName;

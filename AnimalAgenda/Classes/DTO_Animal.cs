@@ -24,6 +24,7 @@ namespace AnimalAgenda.Classes
         public string Sex { get; set; }
         public string Size { get; set; }
         public string Species { get; set; }
+        public string Status { get; set; }
         public bool Vaccines { get; set; }
 
         public DTO_Animal() { }
@@ -55,6 +56,7 @@ namespace AnimalAgenda.Classes
             Sex = documents["sex"];
             Size = documents["size"];
             Species = documents["species"];
+            Status = documents.ContainsKey("status") ? documents["status"] : string.Empty;
             Vaccines = documents["vaccines"];
         }
     }

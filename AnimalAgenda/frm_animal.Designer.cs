@@ -30,17 +30,18 @@ namespace AnimalAgenda
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_animal));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_animal));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule6 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule7 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule8 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.pnAnimal = new DevExpress.XtraBars.Navigation.TabPane();
             this.npnGeneral = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.cmbSize = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -86,6 +87,8 @@ namespace AnimalAgenda
             this.cmdCancel = new DevExpress.XtraEditors.SimpleButton();
             this.fdPhoto = new System.Windows.Forms.OpenFileDialog();
             this.validationProviderAnimal = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.lblStatus = new DevExpress.XtraEditors.LabelControl();
+            this.cmbStatus = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnAnimal)).BeginInit();
             this.pnAnimal.SuspendLayout();
             this.npnGeneral.SuspendLayout();
@@ -113,6 +116,7 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validationProviderAnimal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAnimal
@@ -138,6 +142,8 @@ namespace AnimalAgenda
             // npnGeneral
             // 
             this.npnGeneral.Caption = "Datos Generales";
+            this.npnGeneral.Controls.Add(this.cmbStatus);
+            this.npnGeneral.Controls.Add(this.lblStatus);
             this.npnGeneral.Controls.Add(this.cmbSize);
             this.npnGeneral.Controls.Add(this.cmbSex);
             this.npnGeneral.Controls.Add(this.cmdUploadPhoto);
@@ -178,10 +184,10 @@ namespace AnimalAgenda
             this.cmbSize.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSize.Size = new System.Drawing.Size(140, 20);
             this.cmbSize.TabIndex = 8;
-            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule11.ErrorText = "Tamaño requerido";
-            conditionValidationRule11.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.cmbSize, conditionValidationRule11);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Tamaño requerido";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.cmbSize, conditionValidationRule2);
             // 
             // cmbSex
             // 
@@ -195,10 +201,10 @@ namespace AnimalAgenda
             this.cmbSex.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbSex.Size = new System.Drawing.Size(140, 20);
             this.cmbSex.TabIndex = 5;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Sexo requerido";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.cmbSex, conditionValidationRule1);
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "Sexo requerido";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.cmbSex, conditionValidationRule3);
             // 
             // cmdUploadPhoto
             // 
@@ -210,7 +216,7 @@ namespace AnimalAgenda
             this.cmdUploadPhoto.Location = new System.Drawing.Point(523, 254);
             this.cmdUploadPhoto.Name = "cmdUploadPhoto";
             this.cmdUploadPhoto.Size = new System.Drawing.Size(257, 31);
-            this.cmdUploadPhoto.TabIndex = 12;
+            this.cmdUploadPhoto.TabIndex = 13;
             this.cmdUploadPhoto.Text = "Subir Imagen";
             this.cmdUploadPhoto.Click += new System.EventHandler(this.cmdUploadPhoto_Click);
             // 
@@ -219,12 +225,12 @@ namespace AnimalAgenda
             this.txtCharacter.Location = new System.Drawing.Point(196, 232);
             this.txtCharacter.Name = "txtCharacter";
             this.txtCharacter.Properties.MaxLength = 800;
-            this.txtCharacter.Size = new System.Drawing.Size(301, 69);
+            this.txtCharacter.Size = new System.Drawing.Size(301, 43);
             this.txtCharacter.TabIndex = 9;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "Carácter requerido";
-            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtCharacter, conditionValidationRule2);
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Carácter requerido";
+            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtCharacter, conditionValidationRule4);
             // 
             // dteAdmissionDate
             // 
@@ -239,10 +245,10 @@ namespace AnimalAgenda
             this.dteAdmissionDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dteAdmissionDate.Size = new System.Drawing.Size(140, 20);
             this.dteAdmissionDate.TabIndex = 4;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "Fecha de ingreso requerida";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.dteAdmissionDate, conditionValidationRule3);
+            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule5.ErrorText = "Fecha de ingreso requerida";
+            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.dteAdmissionDate, conditionValidationRule5);
             // 
             // dteBirthday
             // 
@@ -257,10 +263,10 @@ namespace AnimalAgenda
             this.dteBirthday.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dteBirthday.Size = new System.Drawing.Size(140, 20);
             this.dteBirthday.TabIndex = 2;
-            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule4.ErrorText = "Fecha de Nacimiento requerida";
-            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.dteBirthday, conditionValidationRule4);
+            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule6.ErrorText = "Fecha de Nacimiento requerida";
+            conditionValidationRule6.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.dteBirthday, conditionValidationRule6);
             this.dteBirthday.EditValueChanged += new System.EventHandler(this.dteBirthday_EditValueChanged);
             // 
             // lblBirthday
@@ -279,13 +285,14 @@ namespace AnimalAgenda
             this.picPhoto.Name = "picPhoto";
             this.picPhoto.Properties.AllowScrollViaMouseDrag = true;
             this.picPhoto.Properties.AllowZoom = DevExpress.Utils.DefaultBoolean.True;
+            this.picPhoto.Properties.NullText = "Sin imagen";
             this.picPhoto.Properties.ReadOnly = true;
             this.picPhoto.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picPhoto.Properties.ShowMenu = false;
             this.picPhoto.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.picPhoto.Properties.ZoomingOperationMode = DevExpress.XtraEditors.Repository.ZoomingOperationMode.MouseWheel;
             this.picPhoto.Size = new System.Drawing.Size(257, 225);
-            this.picPhoto.TabIndex = 11;
+            this.picPhoto.TabIndex = 12;
             // 
             // txtHairColor
             // 
@@ -293,11 +300,11 @@ namespace AnimalAgenda
             this.txtHairColor.Name = "txtHairColor";
             this.txtHairColor.Properties.MaxLength = 100;
             this.txtHairColor.Size = new System.Drawing.Size(301, 20);
-            this.txtHairColor.TabIndex = 10;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "Color de pelo requerido";
-            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtHairColor, conditionValidationRule5);
+            this.txtHairColor.TabIndex = 11;
+            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule7.ErrorText = "Color de pelo requerido";
+            conditionValidationRule7.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtHairColor, conditionValidationRule7);
             // 
             // lblHairColor
             // 
@@ -336,10 +343,10 @@ namespace AnimalAgenda
             this.txtBreed.Properties.MaxLength = 100;
             this.txtBreed.Size = new System.Drawing.Size(301, 20);
             this.txtBreed.TabIndex = 7;
-            conditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule6.ErrorText = "Raza requerida";
-            conditionValidationRule6.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtBreed, conditionValidationRule6);
+            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule8.ErrorText = "Raza requerida";
+            conditionValidationRule8.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtBreed, conditionValidationRule8);
             // 
             // lblBreed
             // 
@@ -358,10 +365,10 @@ namespace AnimalAgenda
             this.txtSpecies.Properties.MaxLength = 100;
             this.txtSpecies.Size = new System.Drawing.Size(301, 20);
             this.txtSpecies.TabIndex = 6;
-            conditionValidationRule7.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule7.ErrorText = "Especie requerida";
-            conditionValidationRule7.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtSpecies, conditionValidationRule7);
+            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule9.ErrorText = "Especie requerida";
+            conditionValidationRule9.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtSpecies, conditionValidationRule9);
             // 
             // lblSpecies
             // 
@@ -419,10 +426,10 @@ namespace AnimalAgenda
             this.txtName.Properties.MaxLength = 100;
             this.txtName.Size = new System.Drawing.Size(301, 20);
             this.txtName.TabIndex = 1;
-            conditionValidationRule8.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule8.ErrorText = "Nombre requerido";
-            conditionValidationRule8.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtName, conditionValidationRule8);
+            conditionValidationRule10.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule10.ErrorText = "Nombre requerido";
+            conditionValidationRule10.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtName, conditionValidationRule10);
             // 
             // lblName
             // 
@@ -459,7 +466,7 @@ namespace AnimalAgenda
             this.chkDewormer.Name = "chkDewormer";
             this.chkDewormer.Properties.Caption = "";
             this.chkDewormer.Size = new System.Drawing.Size(22, 19);
-            this.chkDewormer.TabIndex = 18;
+            this.chkDewormer.TabIndex = 19;
             // 
             // chkPipettes
             // 
@@ -467,7 +474,7 @@ namespace AnimalAgenda
             this.chkPipettes.Name = "chkPipettes";
             this.chkPipettes.Properties.Caption = "";
             this.chkPipettes.Size = new System.Drawing.Size(87, 19);
-            this.chkPipettes.TabIndex = 17;
+            this.chkPipettes.TabIndex = 18;
             // 
             // chkVaccines
             // 
@@ -475,7 +482,7 @@ namespace AnimalAgenda
             this.chkVaccines.Name = "chkVaccines";
             this.chkVaccines.Properties.Caption = "";
             this.chkVaccines.Size = new System.Drawing.Size(22, 19);
-            this.chkVaccines.TabIndex = 16;
+            this.chkVaccines.TabIndex = 17;
             // 
             // chkCastrated
             // 
@@ -483,7 +490,7 @@ namespace AnimalAgenda
             this.chkCastrated.Name = "chkCastrated";
             this.chkCastrated.Properties.Caption = "";
             this.chkCastrated.Size = new System.Drawing.Size(87, 19);
-            this.chkCastrated.TabIndex = 15;
+            this.chkCastrated.TabIndex = 16;
             // 
             // txtMedication
             // 
@@ -491,7 +498,7 @@ namespace AnimalAgenda
             this.txtMedication.Name = "txtMedication";
             this.txtMedication.Properties.MaxLength = 800;
             this.txtMedication.Size = new System.Drawing.Size(425, 110);
-            this.txtMedication.TabIndex = 20;
+            this.txtMedication.TabIndex = 21;
             // 
             // txtDiseases
             // 
@@ -499,7 +506,7 @@ namespace AnimalAgenda
             this.txtDiseases.Name = "txtDiseases";
             this.txtDiseases.Properties.MaxLength = 800;
             this.txtDiseases.Size = new System.Drawing.Size(425, 110);
-            this.txtDiseases.TabIndex = 19;
+            this.txtDiseases.TabIndex = 20;
             // 
             // lblVaccines
             // 
@@ -579,11 +586,11 @@ namespace AnimalAgenda
             this.txtHistory.Name = "txtHistory";
             this.txtHistory.Properties.MaxLength = 1500;
             this.txtHistory.Size = new System.Drawing.Size(748, 282);
-            this.txtHistory.TabIndex = 21;
-            conditionValidationRule9.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule9.ErrorText = "Historia requerida";
-            conditionValidationRule9.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.txtHistory, conditionValidationRule9);
+            this.txtHistory.TabIndex = 22;
+            conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule11.ErrorText = "Historia requerida";
+            conditionValidationRule11.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.txtHistory, conditionValidationRule11);
             // 
             // lblHistory
             // 
@@ -616,7 +623,7 @@ namespace AnimalAgenda
             this.cmdSave.Location = new System.Drawing.Point(543, 10);
             this.cmdSave.Name = "cmdSave";
             this.cmdSave.Size = new System.Drawing.Size(115, 33);
-            this.cmdSave.TabIndex = 13;
+            this.cmdSave.TabIndex = 14;
             this.cmdSave.Text = "Guardar";
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
@@ -630,7 +637,7 @@ namespace AnimalAgenda
             this.cmdCancel.Location = new System.Drawing.Point(665, 10);
             this.cmdCancel.Name = "cmdCancel";
             this.cmdCancel.Size = new System.Drawing.Size(115, 33);
-            this.cmdCancel.TabIndex = 14;
+            this.cmdCancel.TabIndex = 15;
             this.cmdCancel.Text = "Cancelar";
             this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
@@ -642,6 +649,40 @@ namespace AnimalAgenda
             // validationProviderAnimal
             // 
             this.validationProviderAnimal.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Manual;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Appearance.Options.UseFont = true;
+            this.lblStatus.Location = new System.Drawing.Point(30, 284);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus.TabIndex = 22;
+            this.lblStatus.Text = "Estado:";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.EditValue = "En adopción";
+            this.cmbStatus.Location = new System.Drawing.Point(196, 281);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbStatus.Properties.Items.AddRange(new object[] {
+            "En adopción",
+            "Adoptado",
+            "Adoptado fallecido",
+            "En tratamiento",
+            "Fallecido",
+            "Del refugio",
+            "En transito en el refugio",
+            "Transitado en el refugio"});
+            this.cmbStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbStatus.Size = new System.Drawing.Size(140, 20);
+            this.cmbStatus.TabIndex = 10;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Estado requerido";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.cmbStatus, conditionValidationRule1);
             // 
             // frm_animal
             // 
@@ -689,6 +730,7 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.validationProviderAnimal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -740,5 +782,7 @@ namespace AnimalAgenda
         private DevExpress.XtraEditors.SimpleButton cmdCancel;
         private System.Windows.Forms.OpenFileDialog fdPhoto;
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider validationProviderAnimal;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbStatus;
+        private DevExpress.XtraEditors.LabelControl lblStatus;
     }
 }
