@@ -101,6 +101,9 @@ namespace AnimalAgenda
             this.gvAnimals.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             this.gvAnimals.OptionsBehavior.ReadOnly = true;
             this.gvAnimals.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvAnimals.OptionsDetail.EnableMasterViewMode = false;
+            this.gvAnimals.OptionsDetail.ShowDetailTabs = false;
+            this.gvAnimals.OptionsDetail.ShowEmbeddedDetailIndent = DevExpress.Utils.DefaultBoolean.False;
             this.gvAnimals.OptionsMenu.EnableColumnMenu = false;
             this.gvAnimals.OptionsMenu.EnableGroupPanelMenu = false;
             this.gvAnimals.OptionsSelection.EnableAppearanceFocusedCell = false;

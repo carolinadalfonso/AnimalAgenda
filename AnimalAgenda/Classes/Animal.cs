@@ -1,7 +1,11 @@
 ﻿using AnimalAgenda.Helpers;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 
 namespace AnimalAgenda.Classes
 {
+    [Serializable()]
     public class Animal
     {
         public string AdmissionDate { get; set; }

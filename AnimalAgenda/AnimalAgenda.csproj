@@ -308,6 +308,7 @@
     <Compile Include="Classes\DateTimeSpan.cs" />
     <Compile Include="Classes\MyFireStore.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\Vaccine.cs" />
     <Compile Include="frm_about.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +345,12 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_vaccine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_vaccine.Designer.cs">
+      <DependentUpon>frm_vaccine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\BoolExtensions.cs" />
     <Compile Include="Helpers\DateTimeExtensions.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
@@ -366,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_vaccine.resx">
+      <DependentUpon>frm_vaccine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

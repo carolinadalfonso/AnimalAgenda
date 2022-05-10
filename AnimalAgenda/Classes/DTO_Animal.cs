@@ -1,9 +1,9 @@
-﻿using AnimalAgenda.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace AnimalAgenda.Classes
 {
+    [Serializable()]
     public class DTO_Animal
     {
         public string IdAnimal { get; set; }
@@ -26,6 +26,7 @@ namespace AnimalAgenda.Classes
         public string Species { get; set; }
         public string Status { get; set; }
         public bool Vaccines { get; set; }
+        public List<Vaccine> ListVaccines { get; set; }
 
         public DTO_Animal() { }
         public DTO_Animal(Dictionary<string, dynamic> documents, string id)
@@ -58,6 +59,18 @@ namespace AnimalAgenda.Classes
             Species = documents["species"];
             Status = documents.ContainsKey("status") ? documents["status"] : string.Empty;
             Vaccines = documents["vaccines"];
+            if (documents.ContainsKey("listVaccine"))
+            {
+                ListVaccines = new List<Vaccine>();
+                var lvaccine = documents["listVaccine"];
+                foreach (var itemVaccine in lvaccine)
+                {
+                    Vaccine vaccine = new Vaccine();
+                    vaccine.Name = itemVaccine["name"];
+                    vaccine.Date = itemVaccine["date"];
+                    ListVaccines.Add(vaccine);
+                }
+            }
         }
     }
 }

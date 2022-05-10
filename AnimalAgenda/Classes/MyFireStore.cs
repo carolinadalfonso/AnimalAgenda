@@ -2,6 +2,7 @@
 using Firebase.Storage;
 using Google.Cloud.Firestore;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -80,10 +81,15 @@ namespace AnimalAgenda
             return animals;
         }
 
-        public async Task SaveAnimal(string animalJSON, string documentId = "")
+        public async Task SaveAnimal(string animalJSON, string vaccineJSON = null, string documentId = "")
         {
             CollectionReference animalsRef = db.Collection("dogs");
             Dictionary<string, dynamic> dic = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(animalJSON);
+            if(vaccineJSON != null)
+            {
+                var dicVaccine = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(vaccineJSON);
+                dic.Add("listVaccine", dicVaccine);
+            }
             if (!string.IsNullOrEmpty(documentId))
             {
                 DocumentReference animalRef = animalsRef.Document(documentId);

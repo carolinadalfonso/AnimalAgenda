@@ -69,10 +69,15 @@ namespace AnimalAgenda
 
                 chkCastrated.Checked = selectedAnimal.Castrated;
                 chkPipettes.Checked = selectedAnimal.Pipettes;
-                chkVaccines.Checked = selectedAnimal.Vaccines;
                 chkDewormer.Checked = selectedAnimal.Dewormer;
                 txtDiseases.Text = selectedAnimal.Diseases;
                 txtMedication.Text = selectedAnimal.Medication;
+                if(selectedAnimal.ListVaccines != null && selectedAnimal.ListVaccines.Count > 0)
+                {
+                    gvVaccine.ShowLoadingPanel();
+                    gcontrolVaccine.DataSource = selectedAnimal.ListVaccines;
+                    gvVaccine.HideLoadingPanel();
+                }
 
                 txtHistory.Text = selectedAnimal.History;
             }
@@ -115,7 +120,6 @@ namespace AnimalAgenda
 
                 selectedAnimal.Castrated = chkCastrated.Checked;
                 selectedAnimal.Pipettes = chkPipettes.Checked;
-                selectedAnimal.Vaccines = chkVaccines.Checked;
                 selectedAnimal.Dewormer = chkDewormer.Checked;
                 selectedAnimal.Diseases = txtDiseases.Text;
                 selectedAnimal.Medication = txtMedication.Text;
@@ -128,7 +132,8 @@ namespace AnimalAgenda
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
                 };
                 string animalJSON = JsonConvert.SerializeObject(animal, settings);
-                await fireStore.SaveAnimal(animalJSON, selectedAnimal.IdAnimal);
+                string vaccineJSON = JsonConvert.SerializeObject(selectedAnimal.ListVaccines.ToArray(), settings);
+                await fireStore.SaveAnimal(animalJSON, vaccineJSON, selectedAnimal.IdAnimal);
 
                 if (!string.IsNullOrEmpty(photoDeleted))
                 {
@@ -189,6 +194,53 @@ namespace AnimalAgenda
             }
         }
 
+        private void cmdAddVaccine_Click(object sender, EventArgs e)
+        {
+            Vaccine vaccineSelected = new Vaccine();
+            frm_vaccine frmVaccine = new frm_vaccine(vaccineSelected);
+            DialogResult result = frmVaccine.ShowDialog(this);
+            if(result == DialogResult.OK)
+            {
+                if (selectedAnimal.ListVaccines == null)
+                {
+                    selectedAnimal.ListVaccines = new List<Vaccine>();
+                }
+                selectedAnimal.ListVaccines.Add(vaccineSelected);
+                gcontrolVaccine.DataSource = selectedAnimal.ListVaccines;
+                gcontrolVaccine.RefreshDataSource();
+            }
+        }
+
+        private void cmdEditVaccine_Click(object sender, EventArgs e)
+        {
+            Vaccine vaccineSelected = (Vaccine)gvVaccine.GetFocusedRow();
+            if (vaccineSelected != null)
+            {
+                frm_vaccine frmAnimal = new frm_vaccine(vaccineSelected);
+                DialogResult result = frmAnimal.ShowDialog(this);
+                if (result == DialogResult.OK)
+                {
+                    gcontrolVaccine.DataSource = selectedAnimal.ListVaccines;
+                    gcontrolVaccine.RefreshDataSource();
+                }
+            }
+        }
+
+        private void cmdDeleteVaccine_Click(object sender, EventArgs e)
+        {
+            Vaccine vaccineSelected = (Vaccine)gvVaccine.GetFocusedRow();
+            if (vaccineSelected != null)
+            {
+                DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea borrar el registro seleccionado?", "¡Atención!", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    selectedAnimal.ListVaccines.Remove(vaccineSelected);
+                    gcontrolVaccine.DataSource = selectedAnimal.ListVaccines;
+                    gcontrolVaccine.RefreshDataSource();
+                }
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -201,5 +253,6 @@ namespace AnimalAgenda
         }
 
         #endregion
+
     }
 }

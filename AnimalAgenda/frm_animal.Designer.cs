@@ -30,6 +30,7 @@ namespace AnimalAgenda
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_animal));
@@ -41,9 +42,10 @@ namespace AnimalAgenda
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule9 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule10 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule11 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.pnAnimal = new DevExpress.XtraBars.Navigation.TabPane();
             this.npnGeneral = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.cmbStatus = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lblStatus = new DevExpress.XtraEditors.LabelControl();
             this.cmbSize = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbSex = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmdUploadPhoto = new DevExpress.XtraEditors.SimpleButton();
@@ -67,18 +69,20 @@ namespace AnimalAgenda
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.lblName = new DevExpress.XtraEditors.LabelControl();
             this.npnClinical = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.cmdDeleteVaccine = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdEditVaccine = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdAddVaccine = new DevExpress.XtraEditors.SimpleButton();
+            this.gcontrolVaccine = new DevExpress.XtraGrid.GridControl();
+            this.gvVaccine = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcVaccine = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcVaccineDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkDewormer = new DevExpress.XtraEditors.CheckEdit();
             this.chkPipettes = new DevExpress.XtraEditors.CheckEdit();
-            this.chkVaccines = new DevExpress.XtraEditors.CheckEdit();
             this.chkCastrated = new DevExpress.XtraEditors.CheckEdit();
             this.txtMedication = new DevExpress.XtraEditors.MemoEdit();
             this.txtDiseases = new DevExpress.XtraEditors.MemoEdit();
-            this.lblVaccines = new DevExpress.XtraEditors.LabelControl();
             this.lblMedication = new DevExpress.XtraEditors.LabelControl();
             this.lblDiseases = new DevExpress.XtraEditors.LabelControl();
-            this.lblDewormer = new DevExpress.XtraEditors.LabelControl();
-            this.lblPipettes = new DevExpress.XtraEditors.LabelControl();
-            this.lblCastrated = new DevExpress.XtraEditors.LabelControl();
             this.npHistory = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.txtHistory = new DevExpress.XtraEditors.MemoEdit();
             this.lblHistory = new DevExpress.XtraEditors.LabelControl();
@@ -87,11 +91,11 @@ namespace AnimalAgenda
             this.cmdCancel = new DevExpress.XtraEditors.SimpleButton();
             this.fdPhoto = new System.Windows.Forms.OpenFileDialog();
             this.validationProviderAnimal = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.lblStatus = new DevExpress.XtraEditors.LabelControl();
-            this.cmbStatus = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lblVaccines = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnAnimal)).BeginInit();
             this.pnAnimal.SuspendLayout();
             this.npnGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCharacter.Properties)).BeginInit();
@@ -106,9 +110,10 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             this.npnClinical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcontrolVaccine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvVaccine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDewormer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkPipettes.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVaccines.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkCastrated.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMedication.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiseases.Properties)).BeginInit();
@@ -116,7 +121,6 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validationProviderAnimal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnAnimal
@@ -170,6 +174,40 @@ namespace AnimalAgenda
             this.npnGeneral.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("npnGeneral.ImageOptions.Image")));
             this.npnGeneral.Name = "npnGeneral";
             this.npnGeneral.Size = new System.Drawing.Size(800, 352);
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.EditValue = "En adopción";
+            this.cmbStatus.Location = new System.Drawing.Point(196, 281);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbStatus.Properties.Items.AddRange(new object[] {
+            "En adopción",
+            "Adoptado",
+            "Adoptado fallecido",
+            "En tratamiento",
+            "Fallecido",
+            "Del refugio",
+            "En transito en el refugio",
+            "Transitado en el refugio"});
+            this.cmbStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbStatus.Size = new System.Drawing.Size(140, 20);
+            this.cmbStatus.TabIndex = 10;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Estado requerido";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.validationProviderAnimal.SetValidationRule(this.cmbStatus, conditionValidationRule1);
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Appearance.Options.UseFont = true;
+            this.lblStatus.Location = new System.Drawing.Point(30, 284);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(41, 13);
+            this.lblStatus.TabIndex = 22;
+            this.lblStatus.Text = "Estado:";
             // 
             // cmbSize
             // 
@@ -444,129 +482,169 @@ namespace AnimalAgenda
             // npnClinical
             // 
             this.npnClinical.Caption = "Datos Clínicos";
+            this.npnClinical.Controls.Add(this.lblVaccines);
+            this.npnClinical.Controls.Add(this.cmdDeleteVaccine);
+            this.npnClinical.Controls.Add(this.cmdEditVaccine);
+            this.npnClinical.Controls.Add(this.cmdAddVaccine);
+            this.npnClinical.Controls.Add(this.gcontrolVaccine);
             this.npnClinical.Controls.Add(this.chkDewormer);
             this.npnClinical.Controls.Add(this.chkPipettes);
-            this.npnClinical.Controls.Add(this.chkVaccines);
             this.npnClinical.Controls.Add(this.chkCastrated);
             this.npnClinical.Controls.Add(this.txtMedication);
             this.npnClinical.Controls.Add(this.txtDiseases);
-            this.npnClinical.Controls.Add(this.lblVaccines);
             this.npnClinical.Controls.Add(this.lblMedication);
             this.npnClinical.Controls.Add(this.lblDiseases);
-            this.npnClinical.Controls.Add(this.lblDewormer);
-            this.npnClinical.Controls.Add(this.lblPipettes);
-            this.npnClinical.Controls.Add(this.lblCastrated);
             this.npnClinical.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("npnClinical.ImageOptions.Image")));
             this.npnClinical.Name = "npnClinical";
             this.npnClinical.Size = new System.Drawing.Size(800, 352);
             // 
+            // cmdDeleteVaccine
+            // 
+            this.cmdDeleteVaccine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdDeleteVaccine.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.cmdDeleteVaccine.Appearance.Options.UseBackColor = true;
+            this.cmdDeleteVaccine.Location = new System.Drawing.Point(665, 153);
+            this.cmdDeleteVaccine.Name = "cmdDeleteVaccine";
+            this.cmdDeleteVaccine.Size = new System.Drawing.Size(115, 33);
+            this.cmdDeleteVaccine.TabIndex = 24;
+            this.cmdDeleteVaccine.Text = "Borrar";
+            this.cmdDeleteVaccine.Click += new System.EventHandler(this.cmdDeleteVaccine_Click);
+            // 
+            // cmdEditVaccine
+            // 
+            this.cmdEditVaccine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdEditVaccine.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.cmdEditVaccine.Appearance.Options.UseBackColor = true;
+            this.cmdEditVaccine.Location = new System.Drawing.Point(665, 114);
+            this.cmdEditVaccine.Name = "cmdEditVaccine";
+            this.cmdEditVaccine.Size = new System.Drawing.Size(115, 33);
+            this.cmdEditVaccine.TabIndex = 23;
+            this.cmdEditVaccine.Text = "Modificar";
+            this.cmdEditVaccine.Click += new System.EventHandler(this.cmdEditVaccine_Click);
+            // 
+            // cmdAddVaccine
+            // 
+            this.cmdAddVaccine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAddVaccine.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.cmdAddVaccine.Appearance.Options.UseBackColor = true;
+            this.cmdAddVaccine.Location = new System.Drawing.Point(665, 75);
+            this.cmdAddVaccine.Name = "cmdAddVaccine";
+            this.cmdAddVaccine.Size = new System.Drawing.Size(115, 33);
+            this.cmdAddVaccine.TabIndex = 22;
+            this.cmdAddVaccine.Text = "Agregar";
+            this.cmdAddVaccine.Click += new System.EventHandler(this.cmdAddVaccine_Click);
+            // 
+            // gcontrolVaccine
+            // 
+            this.gcontrolVaccine.Location = new System.Drawing.Point(29, 70);
+            this.gcontrolVaccine.MainView = this.gvVaccine;
+            this.gcontrolVaccine.Name = "gcontrolVaccine";
+            this.gcontrolVaccine.Size = new System.Drawing.Size(629, 121);
+            this.gcontrolVaccine.TabIndex = 21;
+            this.gcontrolVaccine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvVaccine});
+            // 
+            // gvVaccine
+            // 
+            this.gvVaccine.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gcVaccine,
+            this.gcVaccineDate});
+            this.gvVaccine.GridControl = this.gcontrolVaccine;
+            this.gvVaccine.Name = "gvVaccine";
+            this.gvVaccine.OptionsBehavior.Editable = false;
+            this.gvVaccine.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gvVaccine.OptionsCustomization.AllowGroup = false;
+            this.gvVaccine.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.False;
+            this.gvVaccine.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gvVaccine.OptionsMenu.EnableColumnMenu = false;
+            this.gvVaccine.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gvVaccine.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvVaccine.OptionsView.ShowGroupPanel = false;
+            this.gvVaccine.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gcVaccineDate, DevExpress.Data.ColumnSortOrder.Descending)});
+            // 
+            // gcVaccine
+            // 
+            this.gcVaccine.Caption = "Vacuna";
+            this.gcVaccine.FieldName = "Name";
+            this.gcVaccine.Name = "gcVaccine";
+            this.gcVaccine.UnboundDataType = typeof(System.DateTime);
+            this.gcVaccine.Visible = true;
+            this.gcVaccine.VisibleIndex = 0;
+            // 
+            // gcVaccineDate
+            // 
+            this.gcVaccineDate.Caption = "Fecha de la Vacuna";
+            this.gcVaccineDate.FieldName = "Date";
+            this.gcVaccineDate.Name = "gcVaccineDate";
+            this.gcVaccineDate.Visible = true;
+            this.gcVaccineDate.VisibleIndex = 1;
+            // 
             // chkDewormer
             // 
-            this.chkDewormer.Location = new System.Drawing.Point(643, 54);
+            this.chkDewormer.Location = new System.Drawing.Point(542, 20);
             this.chkDewormer.Name = "chkDewormer";
-            this.chkDewormer.Properties.Caption = "";
-            this.chkDewormer.Size = new System.Drawing.Size(22, 19);
+            this.chkDewormer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.chkDewormer.Properties.Appearance.Options.UseFont = true;
+            this.chkDewormer.Properties.Caption = "Desparasitado";
+            this.chkDewormer.Size = new System.Drawing.Size(116, 19);
             this.chkDewormer.TabIndex = 19;
             // 
             // chkPipettes
             // 
-            this.chkPipettes.Location = new System.Drawing.Point(233, 54);
+            this.chkPipettes.Location = new System.Drawing.Point(298, 20);
             this.chkPipettes.Name = "chkPipettes";
-            this.chkPipettes.Properties.Caption = "";
+            this.chkPipettes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.chkPipettes.Properties.Appearance.Options.UseFont = true;
+            this.chkPipettes.Properties.Caption = "Pipetas";
             this.chkPipettes.Size = new System.Drawing.Size(87, 19);
             this.chkPipettes.TabIndex = 18;
             // 
-            // chkVaccines
-            // 
-            this.chkVaccines.Location = new System.Drawing.Point(643, 23);
-            this.chkVaccines.Name = "chkVaccines";
-            this.chkVaccines.Properties.Caption = "";
-            this.chkVaccines.Size = new System.Drawing.Size(22, 19);
-            this.chkVaccines.TabIndex = 17;
-            // 
             // chkCastrated
             // 
-            this.chkCastrated.Location = new System.Drawing.Point(233, 23);
+            this.chkCastrated.Location = new System.Drawing.Point(29, 20);
             this.chkCastrated.Name = "chkCastrated";
-            this.chkCastrated.Properties.Caption = "";
+            this.chkCastrated.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.chkCastrated.Properties.Appearance.Options.UseFont = true;
+            this.chkCastrated.Properties.Caption = "Castrado";
             this.chkCastrated.Size = new System.Drawing.Size(87, 19);
             this.chkCastrated.TabIndex = 16;
             // 
             // txtMedication
             // 
-            this.txtMedication.Location = new System.Drawing.Point(233, 216);
+            this.txtMedication.Location = new System.Drawing.Point(410, 216);
             this.txtMedication.Name = "txtMedication";
             this.txtMedication.Properties.MaxLength = 800;
-            this.txtMedication.Size = new System.Drawing.Size(425, 110);
-            this.txtMedication.TabIndex = 21;
+            this.txtMedication.Size = new System.Drawing.Size(370, 110);
+            this.txtMedication.TabIndex = 28;
             // 
             // txtDiseases
             // 
-            this.txtDiseases.Location = new System.Drawing.Point(233, 90);
+            this.txtDiseases.Location = new System.Drawing.Point(29, 216);
             this.txtDiseases.Name = "txtDiseases";
             this.txtDiseases.Properties.MaxLength = 800;
-            this.txtDiseases.Size = new System.Drawing.Size(425, 110);
-            this.txtDiseases.TabIndex = 20;
-            // 
-            // lblVaccines
-            // 
-            this.lblVaccines.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblVaccines.Appearance.Options.UseFont = true;
-            this.lblVaccines.Location = new System.Drawing.Point(437, 26);
-            this.lblVaccines.Name = "lblVaccines";
-            this.lblVaccines.Size = new System.Drawing.Size(50, 13);
-            this.lblVaccines.TabIndex = 37;
-            this.lblVaccines.Text = "Vacunas:";
+            this.txtDiseases.Size = new System.Drawing.Size(375, 110);
+            this.txtDiseases.TabIndex = 27;
             // 
             // lblMedication
             // 
             this.lblMedication.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblMedication.Appearance.Options.UseFont = true;
-            this.lblMedication.Location = new System.Drawing.Point(27, 218);
+            this.lblMedication.Location = new System.Drawing.Point(410, 197);
             this.lblMedication.Name = "lblMedication";
             this.lblMedication.Size = new System.Drawing.Size(79, 13);
-            this.lblMedication.TabIndex = 33;
+            this.lblMedication.TabIndex = 26;
             this.lblMedication.Text = "Medicaciones:";
             // 
             // lblDiseases
             // 
             this.lblDiseases.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblDiseases.Appearance.Options.UseFont = true;
-            this.lblDiseases.Location = new System.Drawing.Point(27, 92);
+            this.lblDiseases.Location = new System.Drawing.Point(29, 197);
             this.lblDiseases.Name = "lblDiseases";
             this.lblDiseases.Size = new System.Drawing.Size(157, 13);
-            this.lblDiseases.TabIndex = 32;
+            this.lblDiseases.TabIndex = 25;
             this.lblDiseases.Text = "Enfermedades / Afecciones:";
-            // 
-            // lblDewormer
-            // 
-            this.lblDewormer.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblDewormer.Appearance.Options.UseFont = true;
-            this.lblDewormer.Location = new System.Drawing.Point(437, 57);
-            this.lblDewormer.Name = "lblDewormer";
-            this.lblDewormer.Size = new System.Drawing.Size(85, 13);
-            this.lblDewormer.TabIndex = 31;
-            this.lblDewormer.Text = "Desparasitado:";
-            // 
-            // lblPipettes
-            // 
-            this.lblPipettes.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblPipettes.Appearance.Options.UseFont = true;
-            this.lblPipettes.Location = new System.Drawing.Point(27, 57);
-            this.lblPipettes.Name = "lblPipettes";
-            this.lblPipettes.Size = new System.Drawing.Size(45, 13);
-            this.lblPipettes.TabIndex = 29;
-            this.lblPipettes.Text = "Pipetas:";
-            // 
-            // lblCastrated
-            // 
-            this.lblCastrated.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblCastrated.Appearance.Options.UseFont = true;
-            this.lblCastrated.Location = new System.Drawing.Point(27, 26);
-            this.lblCastrated.Name = "lblCastrated";
-            this.lblCastrated.Size = new System.Drawing.Size(54, 13);
-            this.lblCastrated.TabIndex = 27;
-            this.lblCastrated.Text = "Castrado:";
             // 
             // npHistory
             // 
@@ -586,7 +664,7 @@ namespace AnimalAgenda
             this.txtHistory.Name = "txtHistory";
             this.txtHistory.Properties.MaxLength = 1500;
             this.txtHistory.Size = new System.Drawing.Size(748, 282);
-            this.txtHistory.TabIndex = 22;
+            this.txtHistory.TabIndex = 30;
             conditionValidationRule11.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule11.ErrorText = "Historia requerida";
             conditionValidationRule11.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
@@ -599,7 +677,7 @@ namespace AnimalAgenda
             this.lblHistory.Location = new System.Drawing.Point(30, 26);
             this.lblHistory.Name = "lblHistory";
             this.lblHistory.Size = new System.Drawing.Size(47, 13);
-            this.lblHistory.TabIndex = 55;
+            this.lblHistory.TabIndex = 29;
             this.lblHistory.Text = "Historia:";
             // 
             // panel1
@@ -623,7 +701,7 @@ namespace AnimalAgenda
             this.cmdSave.Location = new System.Drawing.Point(543, 10);
             this.cmdSave.Name = "cmdSave";
             this.cmdSave.Size = new System.Drawing.Size(115, 33);
-            this.cmdSave.TabIndex = 14;
+            this.cmdSave.TabIndex = 31;
             this.cmdSave.Text = "Guardar";
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
@@ -637,7 +715,7 @@ namespace AnimalAgenda
             this.cmdCancel.Location = new System.Drawing.Point(665, 10);
             this.cmdCancel.Name = "cmdCancel";
             this.cmdCancel.Size = new System.Drawing.Size(115, 33);
-            this.cmdCancel.TabIndex = 15;
+            this.cmdCancel.TabIndex = 32;
             this.cmdCancel.Text = "Cancelar";
             this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
@@ -650,39 +728,15 @@ namespace AnimalAgenda
             // 
             this.validationProviderAnimal.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Manual;
             // 
-            // lblStatus
+            // lblVaccines
             // 
-            this.lblStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Appearance.Options.UseFont = true;
-            this.lblStatus.Location = new System.Drawing.Point(30, 284);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(41, 13);
-            this.lblStatus.TabIndex = 22;
-            this.lblStatus.Text = "Estado:";
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.EditValue = "En adopción";
-            this.cmbStatus.Location = new System.Drawing.Point(196, 281);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbStatus.Properties.Items.AddRange(new object[] {
-            "En adopción",
-            "Adoptado",
-            "Adoptado fallecido",
-            "En tratamiento",
-            "Fallecido",
-            "Del refugio",
-            "En transito en el refugio",
-            "Transitado en el refugio"});
-            this.cmbStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbStatus.Size = new System.Drawing.Size(140, 20);
-            this.cmbStatus.TabIndex = 10;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "Estado requerido";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.validationProviderAnimal.SetValidationRule(this.cmbStatus, conditionValidationRule1);
+            this.lblVaccines.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblVaccines.Appearance.Options.UseFont = true;
+            this.lblVaccines.Location = new System.Drawing.Point(29, 51);
+            this.lblVaccines.Name = "lblVaccines";
+            this.lblVaccines.Size = new System.Drawing.Size(50, 13);
+            this.lblVaccines.TabIndex = 20;
+            this.lblVaccines.Text = "Vacunas:";
             // 
             // frm_animal
             // 
@@ -704,6 +758,7 @@ namespace AnimalAgenda
             this.pnAnimal.ResumeLayout(false);
             this.npnGeneral.ResumeLayout(false);
             this.npnGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCharacter.Properties)).EndInit();
@@ -719,9 +774,10 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             this.npnClinical.ResumeLayout(false);
             this.npnClinical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcontrolVaccine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvVaccine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkDewormer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkPipettes.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkVaccines.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkCastrated.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMedication.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiseases.Properties)).EndInit();
@@ -730,7 +786,6 @@ namespace AnimalAgenda
             ((System.ComponentModel.ISupportInitialize)(this.txtHistory.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.validationProviderAnimal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -764,16 +819,11 @@ namespace AnimalAgenda
         private DevExpress.XtraBars.Navigation.TabNavigationPage npnClinical;
         private DevExpress.XtraEditors.CheckEdit chkDewormer;
         private DevExpress.XtraEditors.CheckEdit chkPipettes;
-        private DevExpress.XtraEditors.CheckEdit chkVaccines;
         private DevExpress.XtraEditors.CheckEdit chkCastrated;
         private DevExpress.XtraEditors.MemoEdit txtMedication;
         private DevExpress.XtraEditors.MemoEdit txtDiseases;
-        private DevExpress.XtraEditors.LabelControl lblVaccines;
         private DevExpress.XtraEditors.LabelControl lblMedication;
         private DevExpress.XtraEditors.LabelControl lblDiseases;
-        private DevExpress.XtraEditors.LabelControl lblDewormer;
-        private DevExpress.XtraEditors.LabelControl lblPipettes;
-        private DevExpress.XtraEditors.LabelControl lblCastrated;
         private DevExpress.XtraBars.Navigation.TabNavigationPage npHistory;
         private DevExpress.XtraEditors.MemoEdit txtHistory;
         private DevExpress.XtraEditors.LabelControl lblHistory;
@@ -784,5 +834,13 @@ namespace AnimalAgenda
         private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider validationProviderAnimal;
         private DevExpress.XtraEditors.ComboBoxEdit cmbStatus;
         private DevExpress.XtraEditors.LabelControl lblStatus;
+    private DevExpress.XtraGrid.GridControl gcontrolVaccine;
+    private DevExpress.XtraGrid.Views.Grid.GridView gvVaccine;
+    private DevExpress.XtraGrid.Columns.GridColumn gcVaccine;
+    private DevExpress.XtraGrid.Columns.GridColumn gcVaccineDate;
+    private DevExpress.XtraEditors.SimpleButton cmdDeleteVaccine;
+    private DevExpress.XtraEditors.SimpleButton cmdEditVaccine;
+    private DevExpress.XtraEditors.SimpleButton cmdAddVaccine;
+        private DevExpress.XtraEditors.LabelControl lblVaccines;
     }
 }
