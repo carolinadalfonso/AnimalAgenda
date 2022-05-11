@@ -201,6 +201,10 @@ namespace AnimalAgenda
             DialogResult result = frmVaccine.ShowDialog(this);
             if(result == DialogResult.OK)
             {
+                if (selectedAnimal == null)
+                {
+                    selectedAnimal = new DTO_Animal();
+                }
                 if (selectedAnimal.ListVaccines == null)
                 {
                     selectedAnimal.ListVaccines = new List<Vaccine>();
