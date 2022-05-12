@@ -85,7 +85,7 @@ namespace AnimalAgenda
         {
             CollectionReference animalsRef = db.Collection("dogs");
             Dictionary<string, dynamic> dic = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(animalJSON);
-            if(vaccineJSON != null)
+            if(!string.IsNullOrEmpty(vaccineJSON))
             {
                 var dicVaccine = JsonConvert.DeserializeObject<List<Dictionary<string, string>>>(vaccineJSON);
                 dic.Add("listVaccine", dicVaccine);

@@ -132,7 +132,7 @@ namespace AnimalAgenda
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
                 };
                 string animalJSON = JsonConvert.SerializeObject(animal, settings);
-                string vaccineJSON = JsonConvert.SerializeObject(selectedAnimal.ListVaccines.ToArray(), settings);
+                string vaccineJSON = selectedAnimal.ListVaccines != null ? JsonConvert.SerializeObject(selectedAnimal.ListVaccines.ToArray(), settings) : String.Empty;
                 await fireStore.SaveAnimal(animalJSON, vaccineJSON, selectedAnimal.IdAnimal);
 
                 if (!string.IsNullOrEmpty(photoDeleted))
