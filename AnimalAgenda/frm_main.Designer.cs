@@ -41,6 +41,7 @@ namespace AnimalAgenda
             this.Raza = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Sexo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Tamaño = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Estado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -94,7 +95,8 @@ namespace AnimalAgenda
             this.Especie,
             this.Raza,
             this.Sexo,
-            this.Tamaño});
+            this.Tamaño,
+            this.Estado});
             this.gvAnimals.GridControl = this.gcAnimals;
             this.gvAnimals.Name = "gvAnimals";
             this.gvAnimals.OptionsBehavior.Editable = false;
@@ -124,7 +126,7 @@ namespace AnimalAgenda
             this.Birthday.Name = "Birthday";
             this.Birthday.UnboundDataType = typeof(System.DateTime);
             this.Birthday.Visible = true;
-            this.Birthday.VisibleIndex = 3;
+            this.Birthday.VisibleIndex = 4;
             // 
             // Especie
             // 
@@ -148,7 +150,7 @@ namespace AnimalAgenda
             this.Sexo.FieldName = "Sex";
             this.Sexo.Name = "Sexo";
             this.Sexo.Visible = true;
-            this.Sexo.VisibleIndex = 4;
+            this.Sexo.VisibleIndex = 5;
             // 
             // Tamaño
             // 
@@ -156,7 +158,15 @@ namespace AnimalAgenda
             this.Tamaño.FieldName = "Size";
             this.Tamaño.Name = "Tamaño";
             this.Tamaño.Visible = true;
-            this.Tamaño.VisibleIndex = 5;
+            this.Tamaño.VisibleIndex = 6;
+            // 
+            // Estado
+            // 
+            this.Estado.Caption = "Estado";
+            this.Estado.FieldName = "Status";
+            this.Estado.Name = "Estado";
+            this.Estado.Visible = true;
+            this.Estado.VisibleIndex = 3;
             // 
             // ribbonPageGroup1
             // 
@@ -437,6 +447,7 @@ namespace AnimalAgenda
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem cmdAbout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraGrid.Columns.GridColumn Estado;
     }
 }
 

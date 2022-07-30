@@ -57,7 +57,7 @@ namespace AnimalAgenda.Classes
             Sex = documents["sex"];
             Size = documents["size"];
             Species = documents["species"];
-            Status = documents.ContainsKey("status") ? documents["status"] : string.Empty;
+            Status = documents.ContainsKey("status") ? documents["status"] : "En adopción";
             Vaccines = documents["vaccines"];
             if (documents.ContainsKey("listVaccine"))
             {
