@@ -65,6 +65,8 @@ namespace AnimalAgenda
             this.cmdMenu = new DevExpress.XtraBars.BarButtonItem();
             this.cmdCreateUser = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribExportar = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.cmdExportar = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.gcAnimals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAnimals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rcMain)).BeginInit();
@@ -187,7 +189,8 @@ namespace AnimalAgenda
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
             this.ribbonPageGroup2,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribExportar});
             this.ribbonPage2.Name = "ribbonPage2";
             reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.Single;
             reduceOperation1.GroupName = null;
@@ -343,9 +346,10 @@ namespace AnimalAgenda
             this.menuUsers,
             this.cmdCreateUsers,
             this.cmdChangePassword,
-            this.cmdAbout});
+            this.cmdAbout,
+            this.cmdExportar});
             this.rcMain.Location = new System.Drawing.Point(0, 0);
-            this.rcMain.MaxItemId = 22;
+            this.rcMain.MaxItemId = 23;
             this.rcMain.Name = "rcMain";
             this.rcMain.OptionsPageCategories.ShowCaptions = false;
             this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -390,6 +394,21 @@ namespace AnimalAgenda
             this.barButtonItem3.Caption = "Cambiar Contraseña";
             this.barButtonItem3.Id = 15;
             this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // ribExportar
+            // 
+            this.ribExportar.ItemLinks.Add(this.cmdExportar);
+            this.ribExportar.Name = "ribExportar";
+            this.ribExportar.Text = "ribExportar";
+            // 
+            // cmdExportar
+            // 
+            this.cmdExportar.Caption = "Exportar";
+            this.cmdExportar.Id = 22;
+            this.cmdExportar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.cmdExportar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.cmdExportar.Name = "cmdExportar";
+            this.cmdExportar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.cmdExportar_ItemClick);
             // 
             // frm_main
             // 
@@ -448,6 +467,8 @@ namespace AnimalAgenda
         private DevExpress.XtraBars.BarButtonItem cmdAbout;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraGrid.Columns.GridColumn Estado;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribExportar;
+        private DevExpress.XtraBars.BarButtonItem cmdExportar;
     }
 }
 
